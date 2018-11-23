@@ -1,19 +1,53 @@
-# titanic_survival
-探索泰坦尼克号乘客存活情况
+# 机器学习工程师纳米学位 
+## 简介和基础知识
+## 项目：探索泰坦尼克号乘客存活情况
+### 安装
 
-## 项目概述
-在 这个实战项目 中，你将创建决策函数，并根据1912年泰坦尼克号海难的乘客特征，如：性别、年龄等，对乘客生还结果进行预测。你可以从一个简单的算法入手，然后逐渐增加该算法的复杂度，直至你至少能精确地预测出所提供数据中 80% 的乘客的生还结果。通过该项目，你可以在正式开始学习本纳米学位前，了解机器学习的一些概念。你还可以在论坛找到该题目在 Kaggle 的 数据链接。
+本项目要求安装 **Python 2.7** 和以下 Python 库：
 
-此外，请确保 Python 装有完成本项目所需的程序包。我们在本项目中将使用到的 Python 库有两个，即 numpy 和 pandas。现在不需担心它们如何运作——我们将在实战项目 1 中接触到它们。本项目还将让你熟悉项目的提交流程，项目提交是你在纳米学位中需要完成的内容。
+- [NumPy](http://www.numpy.org/)
+- [Pandas](http://pandas.pydata.org)
+- [matplotlib](http://matplotlib.org/)
+- [scikit-learn](http://scikit-learn.org/stable/)
 
-## 项目文件说明
-本项目包含三个文件：
-* titanic_survival-zh.ipynb: 这是最主要的文件，项目中的主要工作都将在这个文件上完成。
-* titanic_data.csv: 项目数据表。你将需要把这个数据加载到 notebook 里。
-* visuals.py: 这个 Python 脚本包含 helper 函数，可以让数据和存活结果可视化。
+你还需要安装软件，才能运行并执行 [Jupyter Notebook](http://ipython.org/notebook.html)。
 
-## 所需软件
-* Python
-* NumPy
-* pandas
-* matplotlib
+如果你还未安装 Python，我们强烈推荐你安装 Python 发行版：[Anaconda](http://continuum.io/downloads)，其具备包括上述程序包在内的更多程序包。安装时，确保你选择的是 Python 2.7 安装程序，而不是 Python 3.x 安装程序。
+
+### 代码
+
+你可以在 notebook 文件 `titanic_survival_exploration.ipynb` 中找到代码模板。在 `visuals.py` 文件中有额外的辅助代码。我们已经提供了一些初始代码来帮助你开始，你需要补充额外函数来顺利完成本项目。请注意，学员无需更改 `visuals.py` 中的代码。如果你对 notebook 中的可视化文件感兴趣，请随意探索。
+
+### 运行
+
+在终端或命令行窗口中，跳转至最上面的项目目录 `titanic_survival_exploration/`（包含 README 文件），并运行如下命令：
+
+```bash
+jupyter notebook titanic_survival_exploration.ipynb
+```
+or
+```bash
+ipython notebook titanic_survival_exploration.ipynb
+```
+
+这将在你的浏览器中打开 iPython Notebook 软件和项目文件。
+
+### 数据
+
+本项目使用的数据集为 `titanic_data.csv`。该数据集由优达学城提供，并包含以下特征：
+
+**特征**
+
+- `Pclass`：社会阶层（1 = Upper class; 2 = Middle class; 3 = Lower class）
+- `Name`：乘客姓名
+- `Sex`：乘客性别
+- `Age`：乘客年龄（某些条目为 `NaN`）
+- `SibSp`：一起上船的兄弟姐妹和配偶人数
+- `Parch`：一起上船的父母和子女人数
+- `Ticket`：乘客的票号
+- `Fare`：乘客支付的票价
+- `Cabin`：乘客的客舱号（某些条目为 `NaN`）
+- `Embarked`：乘客的登船港（C = Cherbourg; Q = Queenstown; S = Southampton）
+
+**目标变量**
+- `survival` : 存活结果 (0 = No; 1 = Yes)
